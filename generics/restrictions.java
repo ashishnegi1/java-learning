@@ -1,3 +1,4 @@
+package generics;
 
 public class restrictions {
     public static void main(String[] args) {

@@ -1,8 +1,9 @@
+package generics;
 
 import java.util.Arrays;
 import java.util.List;
 
-public class generics{
+public class wildcards{
     public static double sumOfList( List<? extends Number> list){
         double sum = 0.0;
         for(Number n : list){
