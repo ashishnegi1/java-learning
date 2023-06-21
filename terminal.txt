@@ -1,0 +1,11 @@
+terminal.txt
+
+git add restrictions.class
+git add restrictions.java
+
+git add  generics/wildcards.class
+git add  generics/wildcards.java
+git add  generics/restrictions.class
+git add  generics/restrictions.java
+
+generics/
