@@ -16,3 +16,8 @@ git add   exceptions/ListOfNumbers.java
 git add .gitignore
 git add exceptions/TryWith.class
 git add exceptions/TryWith.java
+
+git add mygame/client/Client.class
+git add mygame/client/Client.java
+git add mygame/server/Server.class
+git add mygame/server/Server.java

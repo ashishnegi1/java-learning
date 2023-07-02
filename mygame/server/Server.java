@@ -39,27 +39,31 @@ import java.net.*;
 public class Server {
 
     public static void main(String args[]) {
-	ServerSocket serverSocket = null;
+		ServerSocket serverSocket = null;
 
-	Utilities.printMsg("creating server socket");
-	
-	try {
-	    serverSocket = new ServerSocket(4444);
-	} catch (IOException e) {
-	    System.err.println("Unable to create server socket, " + e);
-	    System.exit(1);
-	}
+		Utilities.printMsg("creating server socket");
+		
+		try {
+			serverSocket = new ServerSocket(4444);
+		} catch (IOException e) {
+			System.err.println("Unable to create server socket, " + e);
+			System.exit(1);
+		}
 
-	Utilities.printMsg("accepting client connections");
+		Utilities.printMsg("accepting client connections");
 
-	while (true) {
-	    try {
-		Socket clientSocket = serverSocket.accept();
-		new Client(clientSocket).start();
-	    } catch (IOException e) {
-		System.err.println("Unable to accept socket connection, " + e); 
-		System.exit(1);
-	    }
-	}
+		while (true) {
+			Utilities.printMsg("in loop");
+			try {
+				Utilities.printMsg("entered try block");
+				Socket clientSocket = serverSocket.accept();
+				Utilities.printMsg("creating client");
+				Client client = new Client(clientSocket);
+				client.run();
+			} catch (IOException e) {
+				System.err.println("Unable to accept socket connection, " + e); 
+				System.exit(1);
+			}
+		}
     }
 }

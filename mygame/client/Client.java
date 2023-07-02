@@ -45,6 +45,7 @@ public class Client extends Thread {
 
     public void run() {
         if (clientSocket == null) {
+            Utilities.printMsg("clientSocket == null");
             return;
         }
 
