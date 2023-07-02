@@ -13,7 +13,7 @@ public class ListOfNumbers {
     public ListOfNumbers () {
         list = new ArrayList<Integer>(SIZE);
         for (int i = 0; i < SIZE; i++) {
-            list.add(new Integer(i));
+            list.add(Integer.valueOf(i));
         }
     }
 
@@ -40,10 +40,18 @@ public class ListOfNumbers {
             for (int i = 0; i < SIZE; i++) {
                 out.println("Value at: " + i + " = " + list.get(i));
             }
+            f.close();
         } catch(IndexOutOfBoundsException e) {
             System.err.println("IndexOutOfBoundsException: " + e.getMessage());
         } catch (IOException e) {
             System.err.println("Caught IOException: " + e.getMessage());
+        } finally {
+            if(out != null) {
+                System.out.println("Closing Printwriter");
+                out.close();
+            } else {
+                System.out.println("PrintWriter not open");
+            }
         }
         
         out.close();

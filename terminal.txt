@@ -9,3 +9,10 @@ git add  generics/restrictions.class
 git add  generics/restrictions.java
 
 generics/
+
+git add   exceptions/ListOfNumbers.class
+git add   exceptions/ListOfNumbers.java
+
+git add .gitignore
+git add exceptions/TryWith.class
+git add exceptions/TryWith.java
